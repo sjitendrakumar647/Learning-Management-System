@@ -1,0 +1,45 @@
+<!-- templates/login.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="loginpage row">
+    <div class="loginpage row justify-content-center" style="height: 100%;">
+        <div class="col-md-6">
+            <h2>Login</h2>
+            
+            <!-- {% if messages %}
+                <div class="alert alert-danger">
+                    {% for message in messages %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %} -->
+            
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username:</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="user_type" class="form-label">Login as:</label>
+                    <select class="form-select" id="user_type" name="user_type" required>
+                        <option value="" disabled selected>Select user type</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+            <p class="mt-3">Don't have an account?<a href="{% url 'register' %}">Register here</a>.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

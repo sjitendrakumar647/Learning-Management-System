@@ -1,0 +1,11 @@
+<!-- templates/quiz_result.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Quiz Result{% endblock %}
+
+{% block content %}
+<h2>Quiz Result: {{ quiz.title }}</h2>
+<p>Your Score: {{ score }} / {{ total }}</p>
+<a href="{% url 'student_dashboard' %}" class="btn btn-primary">Back to Dashboard</a>
+{% endblock %}

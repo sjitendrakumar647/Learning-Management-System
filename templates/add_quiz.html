@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Quiz{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">Add a New Quiz</h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <!-- Course Dropdown -->
+                        <div class="mb-4">
+                            <label for="id_course" class="form-label fw-bold">Select Course</label>
+                            <select name="course" id="id_course" class="form-select">
+                                <option value="">Select</option> <!-- Custom first option -->
+                                {% for course in form.course.field.queryset %}
+                                    <option value="{{ course.id }}">{{ course.title }}</option>
+                                {% endfor %}
+                                
+                            </select>
+                        </div>
+
+                        <!-- Course Title -->
+                        <div class="mb-4">
+                            <label for="id_title" class="form-label fw-bold" style="color: #000000;">Quiz Title</label>
+                            {{ form.title}}
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success btn-lg">Create Quiz</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

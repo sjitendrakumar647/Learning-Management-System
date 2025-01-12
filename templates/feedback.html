@@ -1,0 +1,17 @@
+<!-- templates/feedback.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block content %}
+<h2>Submit Feedback</h2>
+<form method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="feedback" class="form-label">Your Feedback:</label>
+        <textarea class="form-control" id="feedback" name="feedback" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Submit Feedback</button>
+</form>
+{% endblock %}

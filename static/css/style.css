@@ -1,0 +1,183 @@
+/* static/css/style.css */
+
+body {
+    padding-top: 70px;
+    background-image: url(https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?t=st=1736357613~exp=1736361213~hmac=1e069f5beca60b3e6b1e5acc1c03f2c80bb76b00d4080a6b9e4f8b3506f790d5&w=1380);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    /* background-color: #b4bbe8; */
+    width: fit-content;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    transition: 0.3s;
+}
+.navbar-brand:hover{
+    border: 2px solid rgba(98, 83, 83, 0.495);
+    background-color: #bbd8f269;
+}
+.nav-logo{
+    height: 50px;
+}
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light gray background for a clean look */
+    color: #343a40; /* Dark gray for text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    /* background-color: #000000; */
+    background: linear-gradient(120deg,lime,aqua);
+    border-radius: 5px;
+    border-color: #0022ff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    color: #000000;
+    /* background-color: #0056b3; */
+    background: linear-gradient(120deg,yellow,orange);
+    border-color: #0056b3;
+}
+
+.btn-outline-secondary {
+    color: #000000;
+    /* background-color: #ffff; */
+    background: linear-gradient(120deg,aqua,lime);
+    border-color: #5a6066;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    /* background-color: #6c757d; */
+    background: linear-gradient(120deg,yellow,orange);
+    color: white;
+}
+
+/* Homepage */
+.homecontainer {
+    height: 630px; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background: linear-gradient(135deg, #007bff 50%, #6c757d 50%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Padding for inner spacing */
+}
+h1.display-4 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+p.lead {
+    font-size: 1.2rem;
+}
+
+/* Buttons in the center */
+.container .btn {
+    width: 150px;
+    margin: 0 10px;
+}
+
+/* Footer (if needed) */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #343a40;
+    color: white;
+    margin-top: 30px;
+}
+
+.loginpage {
+    height: 630px; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background: linear-gradient(135deg,yellow,orange);
+    color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Padding for inner spacing */
+}
+/* Center the form and add spacing */
+.container {
+    margin-top: 50px;
+
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.card-footer {
+    font-size: 0.9rem;
+}
+
+.card-footer a {
+    text-decoration: none;
+}
+
+.btn-primary {
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+.register-btn{
+    margin: 0;
+}
+
+.register-bg{
+    /* background-image: url(https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?t=st=1736357613~exp=1736361213~hmac=1e069f5beca60b3e6b1e5acc1c03f2c80bb76b00d4080a6b9e4f8b3506f790d5&w=1380); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* backdrop-filter: blur(2px); */
+}
+
+.register-form{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    
+}
+
+.form-control{
+    background-color: rgba(255, 255, 255, 0.218);
+}
+.form-control:focus{
+    background-color: rgba(180, 146, 223, 0.247);
+    color: #ffffff;
+}
+label{
+    color: #ffffff;
+}
+.form-check-label{
+    color: #000000;
+}

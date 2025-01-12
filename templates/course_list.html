@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Available Courses{% endblock %}
+
+{% block content %}
+<h2>Available Courses</h2>
+<ul>
+    {% for course in courses %}
+        <li>
+            {{ course.title }} - {{ course.description }}
+            <form method="POST" action="{% url 'enroll_course' course.id %}">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Enroll</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

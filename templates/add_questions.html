@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Questions{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Add Questions to "{{ quiz.title }}"</h2>
+    <form method="POST" id="addQuestionForm">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-flex justify-content-between mt-3">
+            <button type="submit" name="add_question" class="btn btn-secondary">+ Add Question</button>
+            <button type="submit" name="submit_all" class="btn btn-primary">Submit Questions</button>
+        </div>
+    </form>
+
+    <hr>
+    <h3 class="mt-4">Current Questions</h3>
+    <ul class="list-group">
+        {% for question in existing_questions %}
+            <li class="list-group-item">
+                {{ forloop.counter }}. {{ question.question_text }}
+            </li>
+        {% empty %}
+            <li class="list-group-item">No questions added yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

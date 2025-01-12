@@ -1,0 +1,18 @@
+<!-- templates/view_quizzes.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Quizzes for {{ course.title }}{% endblock %}
+
+{% block content %}
+<h2>Quizzes for {{ course.title }}</h2>
+<ul class="list-group">
+    {% for quiz in quizzes %}
+        <li class="list-group-item">
+            {{ quiz.title }} - Created at {{ quiz.created_at }}
+        </li>
+    {% empty %}
+        <li class="list-group-item">No quizzes available.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

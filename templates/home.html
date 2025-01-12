@@ -1,0 +1,18 @@
+<!-- templates/home.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="homecontainer">
+    <div class="homecontainer">
+        <h1 class="display-4 fw-bold text-center">Welcome to the Learning Management System</h1>
+        <p class="lead text-center mt-3">Enhance your learning experience with our platform. Login to explore courses, quizzes, and more!</p>
+        <div class="text-center mt-4">
+            <a href="{% url 'login' %}" class="btn btn-primary btn-lg me-3">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-outline-secondary btn-lg">Register</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
